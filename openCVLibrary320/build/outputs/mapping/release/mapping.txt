@@ -1,0 +1,19 @@
+org.opencv.R -> org.opencv.R:
+    void <init>() -> <init>
+org.opencv.R$attr -> org.opencv.R$attr:
+    int camera_id -> camera_id
+    int show_fps -> show_fps
+    void <init>() -> <init>
+    void <clinit>() -> <clinit>
+org.opencv.R$id -> org.opencv.R$id:
+    int any -> any
+    int back -> back
+    int front -> front
+    void <init>() -> <init>
+    void <clinit>() -> <clinit>
+org.opencv.R$styleable -> org.opencv.R$styleable:
+    int[] CameraBridgeViewBase -> CameraBridgeViewBase
+    int CameraBridgeViewBase_camera_id -> CameraBridgeViewBase_camera_id
+    int CameraBridgeViewBase_show_fps -> CameraBridgeViewBase_show_fps
+    void <init>() -> <init>
+    void <clinit>() -> <clinit>

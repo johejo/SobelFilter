@@ -1,0 +1,338 @@
+_____________________________________________________________________
++ Program class: org/opencv/R
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+    = target 1.7
+  Access flags:  0x31
+    = public final class org.opencv.R extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 20):
+  + Class [java/lang/Object]
+  + Class [org/opencv/R]
+  + Class [org/opencv/R$attr]
+  + Class [org/opencv/R$id]
+  + Class [org/opencv/R$styleable]
+  + Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + Utf8 [()V]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [InnerClasses]
+  + Utf8 [attr]
+  + Utf8 [id]
+  + Utf8 [java/lang/Object]
+  + Utf8 [org/opencv/R]
+  + Utf8 [org/opencv/R$attr]
+  + Utf8 [org/opencv/R$id]
+  + Utf8 [org/opencv/R$styleable]
+  + Utf8 [styleable]
+
+Fields (count = 0):
+
+Methods (count = 1):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public R()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #6
+        + Methodref [java/lang/Object.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 1):
+  + Inner classes attribute (count = 3)
+    - InnerClassesInfo:
+      Access flags:  0x19 = public static final 
+      + Class [org/opencv/R$styleable]
+      + Class [org/opencv/R]
+      + Utf8 [styleable]
+    - InnerClassesInfo:
+      Access flags:  0x19 = public static final 
+      + Class [org/opencv/R$id]
+      + Class [org/opencv/R]
+      + Utf8 [id]
+    - InnerClassesInfo:
+      Access flags:  0x19 = public static final 
+      + Class [org/opencv/R$attr]
+      + Class [org/opencv/R]
+      + Utf8 [attr]
+
+_____________________________________________________________________
++ Program class: org/opencv/R$attr
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+    = target 1.7
+  Access flags:  0x31
+    = public final class org.opencv.R$attr extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 24):
+  + Integer [2130771968]
+  + Integer [2130771969]
+  + Class [java/lang/Object]
+  + Class [org/opencv/R]
+  + Class [org/opencv/R$attr]
+  + Fieldref [org/opencv/R$attr.camera_id I]
+  + Fieldref [org/opencv/R$attr.show_fps I]
+  + Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [camera_id I]
+  + NameAndType [show_fps I]
+  + Utf8 [()V]
+  + Utf8 [<clinit>]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [I]
+  + Utf8 [InnerClasses]
+  + Utf8 [attr]
+  + Utf8 [camera_id]
+  + Utf8 [java/lang/Object]
+  + Utf8 [org/opencv/R]
+  + Utf8 [org/opencv/R$attr]
+  + Utf8 [show_fps]
+
+Fields (count = 2):
+  + Field:        camera_id I
+    Access flags: 0x9
+      = public static int camera_id
+  + Field:        show_fps I
+    Access flags: 0x9
+      = public static int show_fps
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public R$attr()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #8
+        + Methodref [java/lang/Object.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <clinit>()V
+    Access flags: 0x8
+      = static void <clinit>()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 11, locals = 0, stack = 1):
+      [0] ldc #2
+        + Integer [2130771969]
+      [2] putstatic #6
+        + Fieldref [org/opencv/R$attr.camera_id I]
+      [5] ldc #1
+        + Integer [2130771968]
+      [7] putstatic #7
+        + Fieldref [org/opencv/R$attr.show_fps I]
+      [10] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 1):
+  + Inner classes attribute (count = 1)
+    - InnerClassesInfo:
+      Access flags:  0x19 = public static final 
+      + Class [org/opencv/R$attr]
+      + Class [org/opencv/R]
+      + Utf8 [attr]
+
+_____________________________________________________________________
++ Program class: org/opencv/R$id
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+    = target 1.7
+  Access flags:  0x31
+    = public final class org.opencv.R$id extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 28):
+  + Integer [2130837504]
+  + Integer [2130837505]
+  + Integer [2130837506]
+  + Class [java/lang/Object]
+  + Class [org/opencv/R]
+  + Class [org/opencv/R$id]
+  + Fieldref [org/opencv/R$id.any I]
+  + Fieldref [org/opencv/R$id.back I]
+  + Fieldref [org/opencv/R$id.front I]
+  + Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [any I]
+  + NameAndType [back I]
+  + NameAndType [front I]
+  + Utf8 [()V]
+  + Utf8 [<clinit>]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [I]
+  + Utf8 [InnerClasses]
+  + Utf8 [any]
+  + Utf8 [back]
+  + Utf8 [front]
+  + Utf8 [id]
+  + Utf8 [java/lang/Object]
+  + Utf8 [org/opencv/R]
+  + Utf8 [org/opencv/R$id]
+
+Fields (count = 3):
+  + Field:        any I
+    Access flags: 0x9
+      = public static int any
+  + Field:        back I
+    Access flags: 0x9
+      = public static int back
+  + Field:        front I
+    Access flags: 0x9
+      = public static int front
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public R$id()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #10
+        + Methodref [java/lang/Object.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <clinit>()V
+    Access flags: 0x8
+      = static void <clinit>()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 16, locals = 0, stack = 1):
+      [0] ldc #1
+        + Integer [2130837504]
+      [2] putstatic #7
+        + Fieldref [org/opencv/R$id.any I]
+      [5] ldc #2
+        + Integer [2130837505]
+      [7] putstatic #8
+        + Fieldref [org/opencv/R$id.back I]
+      [10] ldc #3
+        + Integer [2130837506]
+      [12] putstatic #9
+        + Fieldref [org/opencv/R$id.front I]
+      [15] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 1):
+  + Inner classes attribute (count = 1)
+    - InnerClassesInfo:
+      Access flags:  0x19 = public static final 
+      + Class [org/opencv/R$id]
+      + Class [org/opencv/R]
+      + Utf8 [id]
+
+_____________________________________________________________________
++ Program class: org/opencv/R$styleable
+  Superclass:    java/lang/Object
+  Major version: 0x33
+  Minor version: 0x0
+    = target 1.7
+  Access flags:  0x31
+    = public final class org.opencv.R$styleable extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 28):
+  + Integer [2130771968]
+  + Integer [2130771969]
+  + Class [java/lang/Object]
+  + Class [org/opencv/R]
+  + Class [org/opencv/R$styleable]
+  + Fieldref [org/opencv/R$styleable.CameraBridgeViewBase [I]
+  + Fieldref [org/opencv/R$styleable.CameraBridgeViewBase_camera_id I]
+  + Fieldref [org/opencv/R$styleable.CameraBridgeViewBase_show_fps I]
+  + Methodref [java/lang/Object.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [CameraBridgeViewBase [I]
+  + NameAndType [CameraBridgeViewBase_camera_id I]
+  + NameAndType [CameraBridgeViewBase_show_fps I]
+  + Utf8 [()V]
+  + Utf8 [<clinit>]
+  + Utf8 [<init>]
+  + Utf8 [CameraBridgeViewBase]
+  + Utf8 [CameraBridgeViewBase_camera_id]
+  + Utf8 [CameraBridgeViewBase_show_fps]
+  + Utf8 [Code]
+  + Utf8 [I]
+  + Utf8 [InnerClasses]
+  + Utf8 [[I]
+  + Utf8 [java/lang/Object]
+  + Utf8 [org/opencv/R]
+  + Utf8 [org/opencv/R$styleable]
+  + Utf8 [styleable]
+
+Fields (count = 3):
+  + Field:        CameraBridgeViewBase [I
+    Access flags: 0x19
+      = public static final int[] CameraBridgeViewBase
+  + Field:        CameraBridgeViewBase_camera_id I
+    Access flags: 0x9
+      = public static int CameraBridgeViewBase_camera_id
+  + Field:        CameraBridgeViewBase_show_fps I
+    Access flags: 0x9
+      = public static int CameraBridgeViewBase_show_fps
+
+Methods (count = 2):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public R$styleable()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #9
+        + Methodref [java/lang/Object.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  - Method:       <clinit>()V
+    Access flags: 0x8
+      = static void <clinit>()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 25, locals = 0, stack = 4):
+      [0] iconst_2
+      [1] newarray 10
+      [3] dup
+      [4] iconst_0
+      [5] ldc #1
+        + Integer [2130771968]
+      [7] iastore
+      [8] dup
+      [9] iconst_1
+      [10] ldc #2
+        + Integer [2130771969]
+      [12] iastore
+      [13] putstatic #6
+        + Fieldref [org/opencv/R$styleable.CameraBridgeViewBase [I]
+      [16] iconst_1
+      [17] putstatic #7
+        + Fieldref [org/opencv/R$styleable.CameraBridgeViewBase_camera_id I]
+      [20] iconst_0
+      [21] putstatic #8
+        + Fieldref [org/opencv/R$styleable.CameraBridgeViewBase_show_fps I]
+      [24] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+
+Class file attributes (count = 1):
+  + Inner classes attribute (count = 1)
+    - InnerClassesInfo:
+      Access flags:  0x19 = public static final 
+      + Class [org/opencv/R$styleable]
+      + Class [org/opencv/R]
+      + Utf8 [styleable]
+
