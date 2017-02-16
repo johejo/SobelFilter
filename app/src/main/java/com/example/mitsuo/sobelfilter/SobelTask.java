@@ -12,6 +12,7 @@ import org.opencv.android.Utils;
 import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
+import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 
 import java.util.ArrayList;
@@ -29,8 +30,6 @@ public class SobelTask extends AsyncTask<Bitmap, Bundle, Bitmap> {
     private ImageView imageView;
     private ProgressDialog progressDialog;
     private Activity uiActivity;
-    private int totalPixel;
-
 
     public SobelTask(Activity ac, ImageView iv) {
         super();
@@ -40,15 +39,11 @@ public class SobelTask extends AsyncTask<Bitmap, Bundle, Bitmap> {
 
     @Override
     protected void onCancelled(Bitmap result) {
-
         progressDialog.dismiss();
-
     }
 
     @Override
     protected void onPreExecute() {
-        // ここに前処理を記述します
-        // 例） プログレスダイアログ表示
         progressDialog = new ProgressDialog(uiActivity);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progressDialog.setMessage("processing...");
@@ -61,14 +56,8 @@ public class SobelTask extends AsyncTask<Bitmap, Bundle, Bitmap> {
     protected Bitmap doInBackground(Bitmap... bitmaps) {
 
         Bitmap bmpout = bitmaps[0].copy(Bitmap.Config.ARGB_8888, true);
-        int h = bmpout.getHeight();
-        int w = bmpout.getWidth();
-        totalPixel = h * w;
-        progressDialog.setMax(totalPixel);
 
-        bmpout = sobel(bmpout);
-
-        return bmpout;
+        return sobel(bmpout);
     }
 
     @Override
@@ -132,54 +121,31 @@ public class SobelTask extends AsyncTask<Bitmap, Bundle, Bitmap> {
         Mat matR = new Mat();
         Mat matG = new Mat();
         Mat matB = new Mat();
-        Mat matX = new Mat();
-        Mat matY = new Mat();
-        ArrayList<Mat>  mv = new ArrayList<>();
         Utils.bitmapToMat(bitmap, mat);
 
-//        Imgproc.cvtColor(mat, mat, Imgproc.COLOR_RGB2GRAY);
-//        Imgproc.cvtColor(mat, mat, Imgproc.COLOR_GRAY2RGB);
-//
-//        Imgproc.Sobel(mat, matX, matB.depth(), 0, 1);
-//        Imgproc.Sobel(mat, matY, matB.depth(), 1, 0);
-//
-//        matRMS(matX, matY, mat);
-
-        setProgressMessage("Decompose color component into RGB.");
-        setProgressMax(3);
-
         Core.extractChannel(mat, matR, 0);
-        setProgress(1 / 3);
+        myFiltering(matR);
+
         Core.extractChannel(mat, matG, 1);
-        setProgress(2 / 3);
+        myFiltering(matG);
+
         Core.extractChannel(mat, matB, 2);
-        setProgress(3 / 3);
+        myFiltering(matB);
 
-        setProgressMessage("Sobel filter processing.");
-        Imgproc.Sobel(matB, matX, matB.depth(), 0, 1);
-        Imgproc.Sobel(matB, matY, matB.depth(), 1, 0);
-        matRMS(matX, matY, matB);
+        matMax3(matB, matG, matR, matB);
 
-        setProgress(1 / 3);
-
-
-        Imgproc.Sobel(matG, matX, matG.depth(), 0, 1);
-        Imgproc.Sobel(matG, matY, matG.depth(), 1, 0);
-        matRMS(matX, matY, matG);
-
-        setProgress(2 / 3);
-
-        Imgproc.Sobel(matR, matX, matR.depth(), 0, 1);
-        Imgproc.Sobel(matR, matY, matR.depth(), 1, 0);
-        matRMS(matX, matY, matR);
-
-        setProgress(3 / 3);
-
-        setProgressMessage("Exploring the maximum value of RGB.");
-        matMax3(matB, matG, matR, matX);
-
-        Utils.matToBitmap(matX, bitmap);
+        Utils.matToBitmap(matB, bitmap);
         return bitmap;
+    }
+
+    private void myFiltering(Mat src){
+        Mat matX = new Mat();
+        Mat matY = new Mat();
+
+        Imgproc.GaussianBlur(src, src, new Size(3, 3), 0, 0);
+        Imgproc.Sobel(src, matX, src.depth(), 0, 1);
+        Imgproc.Sobel(src, matY, src.depth(), 1, 0);
+        matRMS(matX, matY, src);
     }
 
     private void matRMS(Mat src1, Mat src2, Mat dst) {
@@ -208,14 +174,12 @@ public class SobelTask extends AsyncTask<Bitmap, Bundle, Bitmap> {
         src1.get(0, 0, temp1);
         src2.get(0, 0, temp2);
         src3.get(0, 0, temp3);
-        setProgressMax(size);
 
         for (int i = 0; i < size; i++) {
             temp4[i] = chooseBig(chooseBig(temp1[i], temp2[i]), temp3[i]);
         }
 
         dst.put(0, 0, temp4);
-        setProgress(size);
     }
 
     private byte chooseBig(byte a, byte b) {
